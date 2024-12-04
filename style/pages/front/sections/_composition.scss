@@ -15,4 +15,73 @@
 			margin-bottom: vw(25px, $desktop);
 		}
 	}
+	&__flipbook-wrapper{
+		position: relative;
+		background: rgba(0, 0, 0, 0.1);
+		padding: vw(10px, $mobile);
+		&::before{
+			content: '';
+			display: none;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translate(-50%, -50%);
+			background-image: url("../images/flipbook_el.svg");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			@media (min-width: $desk){
+				display: block;
+				width: vw(55px, $desktop);
+				height: 90%;
+			}
+		}
+		@media (min-width: $tab){
+			padding: vw(10px, $tablet);
+		}
+		@media (min-width: $desk){
+			padding: vw(10px, $desktop) vw(20px, $desktop) vw(10px, $desktop) vw(60px, $desktop);
+		}
+	}
+	&__flipbook-inner{
+		position: relative;
+		border: 2px solid #000;
+		padding: vw(5px, $mobile);
+		@media (min-width: $tab){
+			padding: vw(5px, $tablet);
+		}
+		@media (min-width: $desk){
+			padding: vw(10px, $desktop);
+		}
+	}
+	&__flipbook{
+		aspect-ratio: 16/10;
+		height: auto;
+		position: relative;
+		@media (min-width: $desk){
+			aspect-ratio: 16/9;
+		}
+		&-nav{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 100%;
+			display: none;
+			button{
+				font-size: 0;
+				width: vw(60px, $desktop);
+			}
+			@media (min-width: $desk){
+				display: flex;
+				justify-content: space-between;
+				width: 100%;
+				padding: 0 vw(30px, $desktop);
+			}
+		}
+		img{
+			cursor: pointer;
+			height: 100%;
+		}
+	}
 }
