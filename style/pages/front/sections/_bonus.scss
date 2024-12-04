@@ -1,0 +1,105 @@
+.bonus{
+	overflow: hidden;
+	padding: vw(50px, $mobile) 0;
+	@media (min-width: $tab){
+		padding: vw(50px, $tablet) 0;
+	}
+	@media (min-width: $desk){
+		padding: vw(80px, $desktop) 0;
+	}
+	.container{
+		@media (min-width: $desk){
+			max-width: 100%;
+			padding: 0;
+		}
+	}
+	.title-section{
+		margin-bottom: vw(20px, $mobile);
+		@media (min-width: $tab){
+			margin-bottom: vw(30px, $tablet);
+		}
+		@media (min-width: $desk){
+			margin-bottom: vw(40px, $desktop);
+		}
+	}
+	&__inner{
+		display: grid;
+		grid-template-columns: repeat(1, minmax(auto, 1fr));
+		@media (min-width: $desk){
+			grid-template-columns: repeat(2, minmax(auto, 1fr));
+			align-items: center;
+		}
+	}
+	&__content{
+		@media (min-width: $desk){
+			padding-left: calc((100vw - vw(140px, $desktop) - vw(140px, $desktop) - vw(1440px, $desktop)) / 2 + vw(140px, $desktop) + vw(140px, $desktop));
+		}
+	}
+	&__items{
+		position: relative;
+		z-index: 10;
+		display: grid;
+		grid-template-columns: repeat(2, minmax(auto, 1fr));
+		gap: vw(10px, $mobile);
+		margin-bottom: vw(-60px, $mobile);
+		@media (min-width: $tab){
+			gap: vw(10px, $tablet);
+			margin-bottom: vw(-60px, $tablet);
+		}
+		@media (min-width: $desk){
+			gap: vw(10px, $desktop);
+			margin-bottom: 0;
+			margin-right: vw(-200px, $desktop);
+		}
+	}
+	&__item{
+		padding: vw(20px, $mobile);
+		background: $primary;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: vw(10px, $mobile);
+		color: $white;
+		font-family: 'Franklin Gothic Book';
+		@media (min-width: $tab){
+			gap: vw(10px, $tablet);
+			padding: vw(20px, $tablet);
+		}
+		@media (min-width: $desk){
+			gap: vw(10px, $desktop);
+			padding: vw(30px, $desktop);
+		}
+		&-icon{
+			width: vw(60px, $mobile);
+			aspect-ratio: 4/4;
+			@media (min-width: $tab){
+				width: vw(60px, $tablet);
+			}
+			@media (min-width: $desk){
+				width: vw(60px, $desktop);
+			}
+		}
+		&-title{
+			font-size: vw(16px, $mobile);
+			@media (min-width: $tab){
+				font-size: vw(16px, $tablet);
+			}
+			@media (min-width: $desk){
+				font-size: vw(18px, $desktop);
+			}
+		}
+	}
+	&__img{
+		aspect-ratio: 16/11;
+		margin: 0 vw(-20px, $mobile);
+		@media (min-width: $tab){
+			margin: 0 vw(-20px, $tablet);
+		}
+		@media (min-width: $desk){
+			margin: 0;
+		}
+		img{
+			height: 100%;
+		}
+	}
+}

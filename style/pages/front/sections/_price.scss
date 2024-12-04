@@ -36,11 +36,35 @@
 		background: #E4E4E4;
 		padding: vw(20px, $mobile);
 		transition: .3s ease;
-		&:nth-child(even){
-			background: $white;
+		display: grid;
+		grid-auto-flow: row;
+		grid-template: 1fr auto auto auto/ 1fr;
+		@media (max-width: 768px){
+			&:nth-child(2), &:nth-child(3), &:nth-child(6), &:nth-child(7){
+				background: $white;
+			}	
+		}
+		@media (min-width: $desk){
+			&:nth-child(2), &:nth-child(4), &:nth-child(5), &:nth-child(7){
+				background: $white;
+			}	
 		}
 		&:last-child{
-			background: transparent !important;
+			display: block;
+			background-image: url("../images/price_last_item_bg.webp") !important;
+			background-position: center !important;
+			background-repeat: no-repeat !important;
+			background-size: cover !important;
+			@media (min-width: $desk){
+				background: transparent !important;
+			}
+			.btn{
+				width: 100%;
+				@media (max-width: 768px){
+					padding-right: vw(15px, $mobile);
+					padding-left: vw(15px, $mobile);
+				}
+			}
 		}
 		@media (any-hover: hover){
 			&:hover{
@@ -124,10 +148,10 @@
 				font-size: vw(14px, $tablet);
 			}
 			@media (min-width: $desk){
-				min-width: vw(166px, $desktop);
+				min-width: vw(150px, $desktop);
 				border-radius: vw(30px, $desktop);
 				padding: vw(10px, $desktop);
-				padding-left: vw(47px, $desktop);
+				padding-left: vw(40px, $desktop);
 				font-size: vw(18px, $desktop);
 			}
 			&::before{

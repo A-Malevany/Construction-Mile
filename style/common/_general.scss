@@ -35,7 +35,6 @@ main{
 		padding: 0 vw(30px, $tablet);
 	}
 	@media(min-width:$desk){
-		// max-width: vw(1920px, $desktop);
 		max-width: vw(1440px, $desktop);
 		padding: 0 vw(140px, $desktop);
 	}

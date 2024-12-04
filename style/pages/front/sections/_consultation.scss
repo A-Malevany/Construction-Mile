@@ -1,0 +1,142 @@
+.consultation{
+	@media (min-width: $desk){
+		background-image: url("../images/consultation_bg.webp");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.container{
+		@media (max-width: 1023px){
+			max-width: 100%;
+			padding: 0;
+		}
+	}
+	&__body{
+		background: $greenDark;
+		color: $white;
+		padding: vw(50px, $mobile) vw(20px, $mobile);
+		@media (min-width: $tab){
+			padding: vw(50px, $tablet) vw(20px, $tablet);
+		}
+		@media (min-width: $desk){
+			max-width: vw(585px, $desktop);
+			padding: vw(65px, $desktop) vw(60px, $desktop) vw(95px, $desktop) vw(60px, $desktop);
+		}
+	}
+	&__title{
+		font-family: 'Franklin Gothic Demi Cond';
+		font-size: vw(40px, $mobile);
+		text-transform: uppercase;
+		text-align: center;
+		letter-spacing: 0.04em;
+		margin-bottom: vw(20px, $mobile);
+		@media (min-width: $tab){
+			font-size: vw(46px, $tablet);
+			margin-bottom: vw(20px, $tablet);
+		}
+		@media (min-width: $desk){
+			text-align: left;
+			font-size: vw(60px, $desktop);
+			margin-bottom: vw(20px, $desktop);
+		}
+	}
+	&__dscr{
+		text-align: center;
+		font-size: vw(16px, $mobile);
+		margin-bottom: vw(30px, $mobile);
+		@media (min-width: $tab){
+			font-size: vw(16px, $tablet);
+			margin-bottom: vw(30px, $tablet);
+		}
+		@media (min-width: $desk){
+			text-align: left;
+			font-size: vw(16px, $desktop);
+			margin-bottom: vw(40px, $desktop);
+		}
+	}
+	form{
+		display: flex;
+		flex-direction: column;
+		gap: vw(10px, $mobile);
+		@media (min-width: $tab){
+			gap: vw(10px, $tablet);
+		}
+		@media (min-width: $desk){
+			gap: vw(10px, $desktop);
+		}
+		.col-2{
+			display: grid;
+			grid-template-columns: repeat(2, minmax(auto, 1fr));
+			gap: vw(10px, $mobile);
+			@media (min-width: $tab){
+				gap: vw(10px, $tablet);
+			}
+			@media (min-width: $desk){
+				gap: vw(10px, $desktop);
+			}
+		}
+		input{
+			width: 100%;
+			border-radius: vw(10px, $mobile);
+			background: $white;
+			padding: vw(6px, $mobile) vw(20px, $mobile);
+			font-family: 'Franklin Gothic Medium Cond';
+			font-size: vw(16px, $mobile);
+			line-height: 1.4;
+			color: #757575;
+			@media (min-width: $tab){
+				border-radius: vw(10px, $tablet);
+				padding: vw(6px, $tablet) vw(20px, $tablet);
+				font-size: vw(16px, $tablet);
+			}
+			@media (min-width: $desk){
+				border-radius: vw(10px, $desktop);
+				padding: vw(6px, $desktop) vw(20px, $desktop);
+				font-size: vw(16px, $desktop);
+			}
+			&::placeholder{
+				font-family: 'Franklin Gothic Medium Cond';
+				font-size: vw(16px, $mobile);
+				line-height: 1.4;
+				color: #757575;
+				@media (min-width: $tab){
+					font-size: vw(16px, $tablet);
+				}
+				@media (min-width: $desk){
+					font-size: vw(16px, $desktop);
+				}
+			}
+		}
+		button.btn{
+			margin-top: vw(10px, $mobile);
+			@media (min-width: $tab){
+				margin-top: vw(10px, $tablet);
+			}
+			@media (min-width: $desk){
+				margin-top: vw(10px, $desktop);
+			}
+		}
+	}
+	&__polis{
+		font-family: 'Franklin Gothic Book';
+		text-align: center;
+		font-size: vw(16px, $mobile);
+		line-height: 1.25;
+		margin-top: vw(10px, $mobile);
+		span{
+			color: $primary;
+		}
+		a{
+			display: block;
+			text-decoration: underline;
+		}
+		@media (min-width: $tab){
+			margin-top: vw(10px, $tablet);
+			font-size: vw(16px, $tablet);
+		}
+		@media (min-width: $desk){
+			margin-top: vw(10px, $desktop);
+			font-size: vw(16px, $desktop);
+		}
+	}
+}

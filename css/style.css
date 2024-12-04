@@ -176,10 +176,20 @@ main {
   font-size: 5.333vw;
   text-transform: uppercase;
 }
+@media (min-width: 768px) {
+  .title-section {
+    font-size: 3.646vw;
+  }
+}
 @media (min-width: 1024px) {
   .title-section {
     font-size: 1.875vw;
   }
+}
+.title-section strong {
+  font-weight: 400;
+  display: block;
+  color: #40C574;
 }
 
 .btn {
@@ -194,6 +204,21 @@ main {
   text-align: center;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
+}
+.btn.small {
+  padding: 0.533vw 5.333vw;
+}
+@media (min-width: 768px) {
+  .btn.small {
+    padding: 0.26vw 2.604vw;
+    font-size: 2.083vw;
+  }
+}
+@media (min-width: 1024px) {
+  .btn.small {
+    padding: 0.156vw 1.042vw;
+    font-size: 0.833vw;
+  }
 }
 @media (any-hover: hover) {
   .btn:hover {
@@ -801,12 +826,40 @@ main {
   padding: 5.333vw;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template: 1fr auto auto auto/1fr;
 }
-.price__item:nth-child(even) {
-  background: #fff;
+@media (max-width: 768px) {
+  .price__item:nth-child(2), .price__item:nth-child(3), .price__item:nth-child(6), .price__item:nth-child(7) {
+    background: #fff;
+  }
+}
+@media (min-width: 1024px) {
+  .price__item:nth-child(2), .price__item:nth-child(4), .price__item:nth-child(5), .price__item:nth-child(7) {
+    background: #fff;
+  }
 }
 .price__item:last-child {
-  background: transparent !important;
+  display: block;
+  background-image: url("../images/price_last_item_bg.webp") !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+@media (min-width: 1024px) {
+  .price__item:last-child {
+    background: transparent !important;
+  }
+}
+.price__item:last-child .btn {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .price__item:last-child .btn {
+    padding-right: 4vw;
+    padding-left: 4vw;
+  }
 }
 @media (any-hover: hover) {
   .price__item:hover {
@@ -918,10 +971,10 @@ main {
 }
 @media (min-width: 1024px) {
   .price__item-days, .price__item-price {
-    min-width: 8.646vw;
+    min-width: 7.813vw;
     border-radius: 1.563vw;
     padding: 0.521vw;
-    padding-left: 2.448vw;
+    padding-left: 2.083vw;
     font-size: 0.938vw;
   }
 }
@@ -987,5 +1040,388 @@ main {
 @media (min-width: 1024px) {
   .price__item-btn {
     width: 3.385vw;
+  }
+}
+
+.bonus {
+  overflow: hidden;
+  padding: 13.333vw 0;
+}
+@media (min-width: 768px) {
+  .bonus {
+    padding: 6.51vw 0;
+  }
+}
+@media (min-width: 1024px) {
+  .bonus {
+    padding: 4.167vw 0;
+  }
+}
+@media (min-width: 1024px) {
+  .bonus .container {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+.bonus .title-section {
+  margin-bottom: 5.333vw;
+}
+@media (min-width: 768px) {
+  .bonus .title-section {
+    margin-bottom: 3.906vw;
+  }
+}
+@media (min-width: 1024px) {
+  .bonus .title-section {
+    margin-bottom: 2.083vw;
+  }
+}
+.bonus__inner {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(auto, 1fr));
+}
+@media (min-width: 1024px) {
+  .bonus__inner {
+    grid-template-columns: repeat(2, minmax(auto, 1fr));
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media (min-width: 1024px) {
+  .bonus__content {
+    padding-left: calc((100vw - 7.292vw - 7.292vw - 75vw) / 2 + 7.292vw + 7.292vw);
+  }
+}
+.bonus__items {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(auto, 1fr));
+  gap: 2.667vw;
+  margin-bottom: -16vw;
+}
+@media (min-width: 768px) {
+  .bonus__items {
+    gap: 1.302vw;
+    margin-bottom: -7.813vw;
+  }
+}
+@media (min-width: 1024px) {
+  .bonus__items {
+    gap: 0.521vw;
+    margin-bottom: 0;
+    margin-right: -10.417vw;
+  }
+}
+.bonus__item {
+  padding: 5.333vw;
+  background: #40C574;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 2.667vw;
+  color: #fff;
+  font-family: "Franklin Gothic Book";
+}
+@media (min-width: 768px) {
+  .bonus__item {
+    gap: 1.302vw;
+    padding: 2.604vw;
+  }
+}
+@media (min-width: 1024px) {
+  .bonus__item {
+    gap: 0.521vw;
+    padding: 1.563vw;
+  }
+}
+.bonus__item-icon {
+  width: 16vw;
+  aspect-ratio: 4/4;
+}
+@media (min-width: 768px) {
+  .bonus__item-icon {
+    width: 7.813vw;
+  }
+}
+@media (min-width: 1024px) {
+  .bonus__item-icon {
+    width: 3.125vw;
+  }
+}
+.bonus__item-title {
+  font-size: 4.267vw;
+}
+@media (min-width: 768px) {
+  .bonus__item-title {
+    font-size: 2.083vw;
+  }
+}
+@media (min-width: 1024px) {
+  .bonus__item-title {
+    font-size: 0.938vw;
+  }
+}
+.bonus__img {
+  aspect-ratio: 16/11;
+  margin: 0 -5.333vw;
+}
+@media (min-width: 768px) {
+  .bonus__img {
+    margin: 0 -2.604vw;
+  }
+}
+@media (min-width: 1024px) {
+  .bonus__img {
+    margin: 0;
+  }
+}
+.bonus__img img {
+  height: 100%;
+}
+
+@media (min-width: 1024px) {
+  .steps {
+    padding: 4.427vw 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .consultation {
+    background-image: url("../images/consultation_bg.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@media (max-width: 1023px) {
+  .consultation .container {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+.consultation__body {
+  background: #03491E;
+  color: #fff;
+  padding: 13.333vw 5.333vw;
+}
+@media (min-width: 768px) {
+  .consultation__body {
+    padding: 6.51vw 2.604vw;
+  }
+}
+@media (min-width: 1024px) {
+  .consultation__body {
+    max-width: 30.469vw;
+    padding: 3.385vw 3.125vw 4.948vw 3.125vw;
+  }
+}
+.consultation__title {
+  font-family: "Franklin Gothic Demi Cond";
+  font-size: 10.667vw;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.04em;
+  margin-bottom: 5.333vw;
+}
+@media (min-width: 768px) {
+  .consultation__title {
+    font-size: 5.99vw;
+    margin-bottom: 2.604vw;
+  }
+}
+@media (min-width: 1024px) {
+  .consultation__title {
+    text-align: left;
+    font-size: 3.125vw;
+    margin-bottom: 1.042vw;
+  }
+}
+.consultation__dscr {
+  text-align: center;
+  font-size: 4.267vw;
+  margin-bottom: 8vw;
+}
+@media (min-width: 768px) {
+  .consultation__dscr {
+    font-size: 2.083vw;
+    margin-bottom: 3.906vw;
+  }
+}
+@media (min-width: 1024px) {
+  .consultation__dscr {
+    text-align: left;
+    font-size: 0.833vw;
+    margin-bottom: 2.083vw;
+  }
+}
+.consultation form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.667vw;
+}
+@media (min-width: 768px) {
+  .consultation form {
+    gap: 1.302vw;
+  }
+}
+@media (min-width: 1024px) {
+  .consultation form {
+    gap: 0.521vw;
+  }
+}
+.consultation form .col-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(auto, 1fr));
+  gap: 2.667vw;
+}
+@media (min-width: 768px) {
+  .consultation form .col-2 {
+    gap: 1.302vw;
+  }
+}
+@media (min-width: 1024px) {
+  .consultation form .col-2 {
+    gap: 0.521vw;
+  }
+}
+.consultation form input {
+  width: 100%;
+  border-radius: 2.667vw;
+  background: #fff;
+  padding: 1.6vw 5.333vw;
+  font-family: "Franklin Gothic Medium Cond";
+  font-size: 4.267vw;
+  line-height: 1.4;
+  color: #757575;
+}
+@media (min-width: 768px) {
+  .consultation form input {
+    border-radius: 1.302vw;
+    padding: 0.781vw 2.604vw;
+    font-size: 2.083vw;
+  }
+}
+@media (min-width: 1024px) {
+  .consultation form input {
+    border-radius: 0.521vw;
+    padding: 0.313vw 1.042vw;
+    font-size: 0.833vw;
+  }
+}
+.consultation form input::-webkit-input-placeholder {
+  font-family: "Franklin Gothic Medium Cond";
+  font-size: 4.267vw;
+  line-height: 1.4;
+  color: #757575;
+}
+.consultation form input::-moz-placeholder {
+  font-family: "Franklin Gothic Medium Cond";
+  font-size: 4.267vw;
+  line-height: 1.4;
+  color: #757575;
+}
+.consultation form input:-ms-input-placeholder {
+  font-family: "Franklin Gothic Medium Cond";
+  font-size: 4.267vw;
+  line-height: 1.4;
+  color: #757575;
+}
+.consultation form input::-ms-input-placeholder {
+  font-family: "Franklin Gothic Medium Cond";
+  font-size: 4.267vw;
+  line-height: 1.4;
+  color: #757575;
+}
+.consultation form input::placeholder {
+  font-family: "Franklin Gothic Medium Cond";
+  font-size: 4.267vw;
+  line-height: 1.4;
+  color: #757575;
+}
+@media (min-width: 768px) {
+  .consultation form input::-webkit-input-placeholder {
+    font-size: 2.083vw;
+  }
+  .consultation form input::-moz-placeholder {
+    font-size: 2.083vw;
+  }
+  .consultation form input:-ms-input-placeholder {
+    font-size: 2.083vw;
+  }
+  .consultation form input::-ms-input-placeholder {
+    font-size: 2.083vw;
+  }
+  .consultation form input::placeholder {
+    font-size: 2.083vw;
+  }
+}
+@media (min-width: 1024px) {
+  .consultation form input::-webkit-input-placeholder {
+    font-size: 0.833vw;
+  }
+  .consultation form input::-moz-placeholder {
+    font-size: 0.833vw;
+  }
+  .consultation form input:-ms-input-placeholder {
+    font-size: 0.833vw;
+  }
+  .consultation form input::-ms-input-placeholder {
+    font-size: 0.833vw;
+  }
+  .consultation form input::placeholder {
+    font-size: 0.833vw;
+  }
+}
+.consultation form button.btn {
+  margin-top: 2.667vw;
+}
+@media (min-width: 768px) {
+  .consultation form button.btn {
+    margin-top: 1.302vw;
+  }
+}
+@media (min-width: 1024px) {
+  .consultation form button.btn {
+    margin-top: 0.521vw;
+  }
+}
+.consultation__polis {
+  font-family: "Franklin Gothic Book";
+  text-align: center;
+  font-size: 4.267vw;
+  line-height: 1.25;
+  margin-top: 2.667vw;
+}
+.consultation__polis span {
+  color: #40C574;
+}
+.consultation__polis a {
+  display: block;
+  text-decoration: underline;
+}
+@media (min-width: 768px) {
+  .consultation__polis {
+    margin-top: 1.302vw;
+    font-size: 2.083vw;
+  }
+}
+@media (min-width: 1024px) {
+  .consultation__polis {
+    margin-top: 0.521vw;
+    font-size: 0.833vw;
   }
 }

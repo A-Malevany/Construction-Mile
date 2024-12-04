@@ -4,9 +4,14 @@
 	font-size: vw(20px, $mobile);
 	text-transform: uppercase;
 	@media (min-width: $tab){
-		
+		font-size: vw(28px, $tablet);
 	}
 	@media (min-width: $desk){
 		font-size: vw(36px, $desktop);
+	}
+	strong{
+		font-weight: 400;
+		display: block;
+		color: $primary;
 	}
 }
