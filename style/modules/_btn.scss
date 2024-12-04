@@ -1,0 +1,22 @@
+.btn{
+	background: $primary;
+	color: $white;
+	border: 1px solid $primary;
+	border-radius: vw(10px, $mobile);
+	padding: vw(12px, $mobile) vw(20px, $mobile);
+	font-size: vw(16px, $mobile);
+	line-height: 1.75;
+	text-transform: uppercase;
+	text-align: center;
+	@media (min-width: $tab){
+		border-radius: vw(10px, $tablet);
+		padding: vw(12px, $tablet) vw(20px, $tablet);
+		font-size: vw(16px, $tablet);
+	}
+	@media (min-width: $desk){
+		border-radius: vw(10px, $desktop);
+		padding: vw(18px, $desktop) vw(42px, $desktop);
+		font-size: vw(20px, $desktop);
+		line-height: 1.4;
+	}
+}
