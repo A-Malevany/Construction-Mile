@@ -1,0 +1,18 @@
+.composition{
+	padding: vw(4px, $mobile) 0 vw(37px, $mobile);
+	@media (min-width: $tab){
+		padding: vw(4px, $tablet) 0 vw(37px, $tablet);
+	}
+	@media (min-width: $desk){
+		padding: vw(85px, $desktop) 0;
+	}
+	.title-section{
+		margin-bottom: vw(14px, $mobile);
+		@media (min-width: $tab){
+			margin-bottom: vw(20px, $tablet);
+		}
+		@media (min-width: $desk){
+			margin-bottom: vw(25px, $desktop);
+		}
+	}
+}

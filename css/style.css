@@ -154,7 +154,7 @@ main {
 .container {
   max-width: 100vw;
   margin: 0 auto;
-  padding: 0 4vw;
+  padding: 0 5.333vw;
   width: 100%;
 }
 @media (min-width: 768px) {
@@ -192,6 +192,13 @@ main {
   line-height: 1.75;
   text-transform: uppercase;
   text-align: center;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+@media (any-hover: hover) {
+  .btn:hover {
+    background: #03491E;
+  }
 }
 @media (min-width: 768px) {
   .btn {
@@ -432,6 +439,9 @@ main {
             align-items: center;
     text-align: center;
     gap: 1.042vw;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    -webkit-backdrop-filter: blur(6px);
+            backdrop-filter: blur(6px);
   }
 }
 .hero__benefits-item-icon {
@@ -518,4 +528,138 @@ main {
 }
 .hero__list li span {
   color: #FF9D00;
+}
+
+.about .container {
+  max-width: 100%;
+  padding: 0;
+}
+.about__inner {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(auto, 1fr));
+}
+@media (min-width: 1024px) {
+  .about__inner {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    grid-template-columns: repeat(2, minmax(auto, 1fr));
+  }
+}
+@media (min-width: 1024px) {
+  .about__img {
+    height: 100%;
+  }
+}
+.about__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4vw;
+  padding: 8vw 5.333vw;
+}
+@media (min-width: 768px) {
+  .about__content {
+    gap: 1.953vw;
+    padding: 3.906vw 2.604vw;
+  }
+}
+@media (min-width: 1024px) {
+  .about__content {
+    gap: 0.781vw;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 4.167vw 3.125vw;
+  }
+}
+.about__title {
+  font-size: 6.133vw;
+  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .about__title {
+    font-size: 3.125vw;
+  }
+}
+@media (min-width: 1024px) {
+  .about__title {
+    max-width: 27.344vw;
+    font-size: 1.875vw;
+  }
+}
+.about__title strong {
+  font-weight: 400;
+  color: #40C574;
+}
+.about__dscr {
+  font-family: "Franklin Gothic Book";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 5.333vw;
+  font-size: 4.267vw;
+  line-height: 1.25;
+  margin-bottom: 4vw;
+}
+@media (min-width: 768px) {
+  .about__dscr {
+    gap: 2.604vw;
+    font-size: 2.344vw;
+    margin-bottom: 1.953vw;
+  }
+}
+@media (min-width: 1024px) {
+  .about__dscr {
+    max-width: 27.344vw;
+    gap: 1.042vw;
+    font-size: 1.042vw;
+    margin-bottom: 0.781vw;
+  }
+}
+.about__btn {
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  .about__btn {
+    max-width: 24.01vw;
+  }
+}
+
+.composition {
+  padding: 1.067vw 0 9.867vw;
+}
+@media (min-width: 768px) {
+  .composition {
+    padding: 0.521vw 0 4.818vw;
+  }
+}
+@media (min-width: 1024px) {
+  .composition {
+    padding: 4.427vw 0;
+  }
+}
+.composition .title-section {
+  margin-bottom: 3.733vw;
+}
+@media (min-width: 768px) {
+  .composition .title-section {
+    margin-bottom: 2.604vw;
+  }
+}
+@media (min-width: 1024px) {
+  .composition .title-section {
+    margin-bottom: 1.302vw;
+  }
 }

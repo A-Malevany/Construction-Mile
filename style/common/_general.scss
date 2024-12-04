@@ -28,7 +28,7 @@ main{
 .container{
 	max-width: vw(375px, $mobile);
 	margin: 0 auto;
-	padding: 0 vw(15px, $mobile);
+	padding: 0 vw(20px, $mobile);
 	width: 100%;
 	@media(min-width:$tab){
 		max-width: vw(768px, $tablet);
