@@ -182,7 +182,7 @@
 		flex-direction: column;
 		align-items: flex-start;
 		gap: vw(5px, $mobile);
-		font-size: vw(17px, $mobile);
+		font-size: vw(16px, $mobile);
 		line-height: 1.72;
 		@media (min-width: $tab){
 			gap: vw(5px, $tablet);

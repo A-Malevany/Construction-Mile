@@ -93,10 +93,11 @@
 		aspect-ratio: 16/11;
 		margin: 0 vw(-20px, $mobile);
 		@media (min-width: $tab){
-			margin: 0 vw(-20px, $tablet);
+			margin: 0 vw(-40px, $tablet);
 		}
 		@media (min-width: $desk){
 			margin: 0;
+			aspect-ratio: 16/12.2;
 		}
 		img{
 			height: 100%;

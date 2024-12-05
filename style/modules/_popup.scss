@@ -1,0 +1,105 @@
+.popup {
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	opacity: 0;
+	transition: .3s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 999;
+	padding: 0 vw(20px, $mobile);
+	@media (min-width: $tab){
+		padding: 0 vw(30px, $tablet);
+	}
+	@media (min-width: $desk){
+		padding: 0 vw(140px, $desktop);
+	}
+	&.active {
+		opacity: 1;
+		pointer-events: auto;
+	}
+	&__body{
+		max-width: vw(400px, $mobile);
+		width: 100%;
+		max-height: 80vh;
+		overflow: hidden;
+		overflow-y: auto;
+		padding: vw(30px, $mobile) vw(20px, $mobile);
+		background: $white;
+		box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.15);
+		border-radius: vw(5px, $mobile);
+		position: relative;
+		@media (min-width: $tab){
+			border-radius: vw(5px, $tablet);
+			padding: vw(40px, $tablet);
+			max-width: vw(518px, $tablet);
+		}
+		@media (min-width: $desk){
+			border-radius: vw(5px, $desktop);
+			padding: vw(50px, $desktop);
+			max-width: vw(518px, $desktop);
+		}
+		&::-webkit-scrollbar{
+			display: none;
+		}
+		.popup__close{
+			cursor: pointer;
+			position: absolute;
+			width: vw(20px, $mobile);
+			aspect-ratio: 4/4;
+			background-image: url('../images/icons/close.svg');
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			top: vw(15px, $mobile);
+			right: vw(20px, $mobile);
+			@media (min-width: $tab){
+				width: vw(20px, $tablet);
+				top: vw(10px, $tablet);
+				right: vw(15px, $tablet);
+			}
+			@media (min-width: $desk){
+				width: vw(22px, $desktop);
+				top: vw(15px, $desktop);
+				right: vw(20px, $desktop);
+			}
+		}
+	}
+	&__content{
+		font-family: 'Franklin Gothic Book';
+		ul{
+			display: flex;
+			flex-direction: column;
+			gap: vw(10px, $mobile);
+			font-size: vw(16px, $mobile);
+			@media (min-width: $tab){
+				gap: vw(10px, $tablet);
+				font-size: vw(16px, $tablet);
+			}
+			@media (min-width: $desk){
+				gap: vw(10px, $desktop);
+				font-size: vw(16px, $desktop);
+			}
+			li{
+				display: flex;
+				align-items: flex-start;
+				gap: vw(10px, $mobile);
+				@media (min-width: $tab){
+					gap: vw(10px, $tablet);
+				}
+				@media (min-width: $desk){
+					gap: vw(10px, $desktop);
+				}
+			}
+			span{
+				color: $primary;
+			}
+		}
+	}
+}

@@ -9,14 +9,14 @@
 		}
 	}
 	&__inner-wrapper{
-		@media (min-width: $tab){
+		@media (min-width: $desk){
 			background-image: url("../images/price_bg.webp");
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: cover;
 		}
 		.container{
-			@media (max-width: 768px){
+			@media (max-width: 1023px){
 				padding: 0;
 				max-width: 100%;
 			}
@@ -44,32 +44,24 @@
 				background: $white;
 			}	
 		}
-		@media (min-width: $desk){
-			&:nth-child(2), &:nth-child(4), &:nth-child(5), &:nth-child(7){
+		@media (min-width: $tab){
+			&:nth-child(2), &:nth-child(4), &:nth-child(6), &:nth-child(7){
 				background: $white;
 			}	
 		}
-		&:last-child{
-			display: block;
-			background-image: url("../images/price_last_item_bg.webp") !important;
-			background-position: center !important;
-			background-repeat: no-repeat !important;
-			background-size: cover !important;
-			@media (min-width: $desk){
-				background: transparent !important;
-			}
-			.btn{
-				width: 100%;
-				@media (max-width: 768px){
-					padding-right: vw(15px, $mobile);
-					padding-left: vw(15px, $mobile);
-				}
-			}
+		@media (min-width: $desk){
+			background: #E4E4E4 !important;
+			&:nth-child(2), &:nth-child(4), &:nth-child(5), &:nth-child(7){
+				background: $white !important;
+			}	
 		}
 		@media (any-hover: hover){
 			&:hover{
-				background: $primary;
+				background: $primary !important;
 				color: $white;
+				.price__item-icon{
+					filter: invert(1) brightness(1);
+				}
 				.price__item-days, .price__item-price{
 					border-color: $white;
 				}
@@ -81,6 +73,23 @@
 				}
 				.price__item-btn{
 					background-image: url("../images/icons/add_active.svg");
+				}
+			}
+		}
+		&:last-child{
+			display: block;
+			background: url("../images/price_last_item_bg.webp") !important;
+			background-position: center !important;
+			background-repeat: no-repeat !important;
+			background-size: cover !important;
+			@media (min-width: $desk){
+				background: transparent !important;
+			}
+			.btn{
+				width: 100%;
+				@media (max-width: 768px){
+					padding-right: vw(15px, $mobile);
+					padding-left: vw(15px, $mobile);
 				}
 			}
 		}
@@ -97,7 +106,7 @@
 			margin-left: auto;
 			margin-bottom: vw(20px, $mobile);
 			@media (min-width: $tab){
-				width: vw(46px, $tablet);
+				width: vw(56px, $tablet);
 				margin-bottom: vw(20px, $tablet);
 			}
 			@media (min-width: $desk){
@@ -110,7 +119,7 @@
 			text-transform: uppercase;
 			margin-bottom: vw(20px, $mobile);
 			@media (min-width: $tab){
-				font-size: vw(16px, $tablet);
+				font-size: vw(18px, $tablet);
 				margin-bottom: vw(20px, $tablet);
 			}
 			@media (min-width: $desk){
@@ -141,18 +150,18 @@
 			font-size: vw(14px, $mobile);
 			text-transform: uppercase;
 			@media (min-width: $tab){
-				min-width: vw(100px, $tablet);
+				min-width: vw(120px, $tablet);
 				border-radius: vw(30px, $tablet);
-				padding: vw(6px, $tablet);
-				padding-left: vw(26px, $tablet);
-				font-size: vw(14px, $tablet);
+				padding: vw(8px, $tablet);
+				padding-left: vw(30px, $tablet);
+				font-size: vw(16px, $tablet);
 			}
 			@media (min-width: $desk){
 				min-width: vw(150px, $desktop);
 				border-radius: vw(30px, $desktop);
 				padding: vw(10px, $desktop);
-				padding-left: vw(40px, $desktop);
-				font-size: vw(18px, $desktop);
+				padding-left: vw(38px, $desktop);
+				font-size: vw(26px, $desktop);
 			}
 			&::before{
 				content: '';
@@ -172,6 +181,11 @@
 				@media (min-width: $desk){
 					width: vw(22px, $desktop);
 					left: vw(10px, $desktop);
+				}
+			}
+			span{
+				@media (min-width: $desk){
+					font-size: vw(16px, $desktop);
 				}
 			}
 		}
@@ -201,7 +215,7 @@
 			background-repeat: no-repeat;
 			background-size: contain;
 			@media (min-width: $tab){
-				width: vw(36px, $tablet);
+				width: vw(46px, $tablet);
 			}
 			@media (min-width: $desk){
 				width: vw(65px, $desktop);

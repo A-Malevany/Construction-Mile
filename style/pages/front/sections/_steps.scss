@@ -1,5 +1,301 @@
 .steps{
+	padding-top: 0 !important;
+	overflow: hidden;
 	@media (min-width: $desk){
 		padding: vw(85px, $desktop) 0;
+	}
+	.title-section{
+		margin-bottom: vw(32px, $mobile);
+		@media (min-width: $tab){
+			margin-bottom: vw(32px, $tablet);
+		}
+		@media (min-width: $desk){
+			margin-bottom: vw(26px, $desktop);
+		}
+	}
+	&__inner-wrapper{
+		@media (max-width: 1023px){
+			.container{
+				max-width: 100%;
+				padding: 0;
+			}
+		}
+		@media (min-width: $desk){
+			background-image: url("../images/steps_bg.webp");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	}
+	&__items{
+		display: grid;
+		grid-template-columns: repeat(2, minmax(auto, 1fr));
+		@media (min-width: $tab){
+			grid-template-columns: repeat(3, minmax(auto, 1fr));
+		}
+	}
+	&__item{
+		position: relative;
+		padding: vw(24px, $mobile) vw(10px, $mobile) vw(24px, $mobile) vw(20px, $mobile);
+		background: #E4E4E4;
+		&::before{
+			content: '';
+			position: absolute;
+			z-index: 10;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+		@media (min-width: $tab){
+			padding: vw(24px, $tablet) vw(10px, $tablet) vw(24px, $tablet) vw(20px, $tablet);
+			&:nth-child(1){
+				order: 1;
+				&::before{
+					background-image: url("../images/icons/step_from_1_desktop.svg");
+					width: vw(45px, $tablet);
+					height: vw(20px, $tablet);
+					bottom: vw(35px, $tablet);
+					right: vw(-10px, $tablet);
+				}
+			}
+			&:nth-child(2){
+				order: 2;
+				&::before{
+					background-image: url("../images/icons/step_from_1_desktop.svg");
+					width: vw(45px, $tablet);
+					height: vw(20px, $tablet);
+					bottom: vw(35px, $tablet);
+					right: vw(-10px, $tablet);
+				}
+			}
+			&:nth-child(3){
+				order: 3;
+				&::before{
+					background-image: url("../images/icons/step_from_3_desktop.svg");
+					width: vw(35px, $tablet);
+					height: vw(130px, $tablet);
+					bottom: vw(-100px, $tablet);
+					left: vw(50px, $tablet);
+				}
+			}
+			&:nth-child(4){
+				background: $white;
+				order: 6;
+				&::before{
+					background-image: url("../images/icons/step_from_4_desktop.svg");
+					width: vw(45px, $tablet);
+					height: vw(20px, $tablet);
+					bottom: vw(60px, $tablet);
+					left: vw(-25px, $tablet);
+				}
+			}
+			&:nth-child(5){
+				order: 5;
+				.steps__item-step{
+					transform: scale(1.25);
+				}
+			}
+			&:nth-child(6){
+				order: 4;
+			}
+		}
+		@media (min-width: $desk){
+			padding: vw(24px, $desktop) vw(20px, $desktop) vw(40px, $desktop) vw(30px, $desktop);
+			&:nth-child(1){
+				order: 1;
+				&::before{
+					background-image: url("../images/icons/step_from_1_desktop.svg");
+					width: vw(86px, $desktop);
+					height: vw(20px, $desktop);
+					bottom: vw(75px, $desktop);
+					right: vw(-20px, $desktop);
+				}
+			}
+			&:nth-child(2){
+				order: 2;
+				background: $white;
+				&::before{
+					background-image: url("../images/icons/step_from_2_desktop.svg");
+					width: vw(86px, $desktop);
+					height: vw(20px, $desktop);
+					bottom: vw(75px, $desktop);
+					right: vw(-20px, $desktop);
+				}
+			}
+			&:nth-child(3){
+				order: 3;
+				&::before{
+					background-image: url("../images/icons/step_from_3_desktop.svg");
+					width: vw(38px, $desktop);
+					height: vw(167px, $desktop);
+					bottom: vw(-110px, $desktop);
+					left: vw(85px, $desktop);
+				}
+			}
+			&:nth-child(4){
+				background: $white;
+				order: 6;
+				&::before{
+					background-image: url("../images/icons/step_from_4_desktop.svg");
+					width: vw(86px, $desktop);
+					height: vw(20px, $desktop);
+					bottom: vw(65px, $desktop);
+					left: vw(-55px, $desktop);
+				}
+			}
+			&:nth-child(5){
+				order: 5;
+				.steps__item-step{
+					background: $orange;
+					transform: scale(1.25);
+				}
+			}
+			&:nth-child(6){
+				order: 4;
+				padding: 0;
+				background: transparent;
+				img{
+					display: none;
+				}
+			}
+		}
+		@media (max-width: 1023px){
+			&:nth-child(2), &:nth-child(4){
+				background: $white;
+			}
+			&:nth-child(5){
+				.steps__item-step {
+					background: $orange;
+				}
+			}
+			&:last-child{
+				padding: 0;
+				img{
+					aspect-ratio: 16/12.7;
+					height: 100%;
+				}
+			}
+		}
+		@media (max-width: 767px){
+			background: #E4E4E4 !important;
+			&:nth-child(1){
+				order: 1;
+				.steps__item-title{
+					width: min-content;
+				}
+				&::before{
+					background-image: url("../images/icons/step_from_1.svg");
+					width: vw(31px, $mobile);
+					height: vw(20px, $mobile);
+					bottom: vw(38px, $mobile);
+					right: vw(-14px, $mobile);
+				}
+			}
+			&:nth-child(2){
+				order: 2;
+				&::before{
+					background-image: url("../images/icons/step_from_2.svg");
+				}
+			}
+			&:nth-child(2), &:nth-child(4){
+				&::before{
+					width: vw(20px, $mobile);
+					height: vw(41px, $mobile);
+					bottom: vw(-15px, $mobile);
+					left: vw(32px, $mobile);
+				}
+			}
+			&:nth-child(3){
+				order: 4;
+				&::before{
+					background-image: url("../images/icons/step_from_3.svg");
+					width: vw(43px, $mobile);
+					height: vw(20px, $mobile);
+					bottom: vw(38px, $mobile);
+					left: vw(-14px, $mobile);
+				}
+			}
+			&:nth-child(4){
+				order: 3;
+				&::before{
+					background-image: url("../images/icons/step_from_4.svg");
+				}
+			}
+			&:nth-child(5){
+				order: 5;
+			}
+			&:nth-child(6){
+				order: 6;
+			}
+			&:nth-child(2), &:nth-child(4){
+				background: $white !important;
+			}
+			&:nth-child(5){
+				.steps__item-step {
+					background: $orange;
+				}
+			}
+			&:last-child{
+				padding: 0;
+			}
+		}
+		&-icon{
+			display: block;
+			width: vw(104px, $mobile);
+			aspect-ratio: 4/4;
+			margin: 0 auto;
+			margin-bottom: vw(10px, $mobile);
+			@media (min-width: $tab){
+				width: vw(80px, $tablet);
+				margin-bottom: vw(10px, $tablet);
+			}
+			@media (min-width: $desk){
+				width: vw(104px, $desktop);
+				margin-bottom: vw(10px, $desktop);
+			}
+		}
+		&-bottom{
+			display: flex;
+			align-items: center;
+			gap: vw(5px, $mobile);
+			@media (min-width: $tab){
+				gap: vw(10px, $tablet);
+			}
+			@media (min-width: $desk){
+				gap: vw(20px, $desktop);
+			}
+		}
+		&-step{
+			flex-shrink: 0;
+			width: vw(46px, $mobile);
+			aspect-ratio: 4/4;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			background: $primary;
+			font-family: 'Franklin Gothic Book';
+			font-size: vw(20px, $mobile);
+			text-transform: uppercase;
+			@media (min-width: $tab){
+				width: vw(46px, $tablet);
+				font-size: vw(20px, $tablet);
+			}
+			@media (min-width: $desk){
+				width: vw(71px, $desktop);
+				font-size: vw(32px, $desktop);
+			}
+		}
+		&-title{
+			font-size: vw(16px, $mobile);
+			text-transform: uppercase;
+			@media (min-width: $tab){
+				font-size: vw(16px, $tablet);
+			}
+			@media (min-width: $desk){
+				font-size: vw(24px, $desktop);
+			}
+		}
 	}
 }
