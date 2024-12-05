@@ -3,6 +3,7 @@ function flipbook() {
 		$('#composition__flipbook').turn({
 			width: '100%',
 			height: 'auto',
+			swipe: true,
 			acceleration: 1,
 			ease: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
 			autoCenter: true,
@@ -18,7 +19,7 @@ function flipbook() {
 		});
 	});
 }
-flipbook();
+flipbook()
 
 function popupListInsert(current) {
 	const data = current.dataset.list;

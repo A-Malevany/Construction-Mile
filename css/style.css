@@ -965,6 +965,7 @@ main {
 }
 .composition__flipbook-nav {
   position: absolute;
+  z-index: 100;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
