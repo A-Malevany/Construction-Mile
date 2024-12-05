@@ -68,7 +68,7 @@
 	}
 	&__dscr{
 		font-family: 'Franklin Gothic Medium Cond';
-		font-size: vw(24px, $mobile);
+		font-size: vw(23px, $mobile);
 		@media (min-width: $tab){
 			font-size: vw(24px, $tablet);
 			max-width: vw(450px, $tablet);
@@ -76,6 +76,41 @@
 		@media (min-width: $desk){
 			max-width: vw(600px, $desktop);
 			font-size: vw(32px, $desktop);
+		}
+		.stroke{
+			font-weight: 400;
+			position: relative;
+			z-index: 0;
+			b{
+				font-weight: 400;
+				@media (min-width: $desk){
+					font-size: vw(40px, $desktop);
+				}
+			}
+			&::before {
+				content: '';
+				position: absolute;
+				width: vw(118px, $mobile);
+				height: vw(37px, $mobile);
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				background-image: url("../images/icons/stroke.svg");
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: contain;
+				z-index: -1;
+				@media (min-width: $tab){
+					width: vw(118px, $tablet);
+					height: vw(37px, $tablet);
+				}
+				@media (min-width: $desk){
+					width: vw(182px, $desktop);
+					height: vw(57px, $desktop);
+					left: 51%;
+					top: 35%;
+				}
+			}
 		}
 		span{
 			display: block;

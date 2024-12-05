@@ -368,6 +368,7 @@ main {
 }
 @media (any-hover: hover) {
   .btn:hover {
+    border-color: #03491E;
     background: #03491E;
   }
 }
@@ -482,7 +483,7 @@ main {
 }
 .hero__dscr {
   font-family: "Franklin Gothic Medium Cond";
-  font-size: 6.4vw;
+  font-size: 6.133vw;
 }
 @media (min-width: 768px) {
   .hero__dscr {
@@ -494,6 +495,49 @@ main {
   .hero__dscr {
     max-width: 31.25vw;
     font-size: 1.667vw;
+  }
+}
+.hero__dscr .stroke {
+  font-weight: 400;
+  position: relative;
+  z-index: 0;
+}
+.hero__dscr .stroke b {
+  font-weight: 400;
+}
+@media (min-width: 1024px) {
+  .hero__dscr .stroke b {
+    font-size: 2.083vw;
+  }
+}
+.hero__dscr .stroke::before {
+  content: "";
+  position: absolute;
+  width: 31.467vw;
+  height: 9.867vw;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-image: url("../images/icons/stroke.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+}
+@media (min-width: 768px) {
+  .hero__dscr .stroke::before {
+    width: 15.365vw;
+    height: 4.818vw;
+  }
+}
+@media (min-width: 1024px) {
+  .hero__dscr .stroke::before {
+    width: 9.479vw;
+    height: 2.969vw;
+    left: 51%;
+    top: 35%;
   }
 }
 .hero__dscr span {

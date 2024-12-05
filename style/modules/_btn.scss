@@ -22,6 +22,7 @@
 	}
 	@media (any-hover: hover){
 		&:hover{
+			border-color: $greenDark;
 			background: $greenDark;
 		}
 	}
