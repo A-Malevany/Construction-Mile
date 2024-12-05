@@ -343,7 +343,7 @@ main {
   color: #fff;
   border: 1px solid #40C574;
   border-radius: 2.667vw;
-  padding: 3.2vw 5.333vw;
+  padding: 3.2vw 4vw;
   font-size: 4.267vw;
   line-height: 1.75;
   text-transform: uppercase;
@@ -836,7 +836,7 @@ main {
 }
 .composition__flipbook-wrapper {
   position: relative;
-  background: rgba(0, 0, 0, 0.1);
+  background: #E5E5E5;
   padding: 2.667vw;
 }
 .composition__flipbook-wrapper::before {
@@ -893,6 +893,30 @@ main {
 @media (min-width: 1024px) {
   .composition__flipbook {
     aspect-ratio: 16/9;
+  }
+}
+.composition__flipbook::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  z-index: 20;
+  width: 10.667vw;
+  aspect-ratio: 4/4;
+  top: 0;
+  right: 0;
+  background-image: url("../images/flipbook_el_2.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (min-width: 768px) {
+  .composition__flipbook::before {
+    width: 10.417vw;
+  }
+}
+@media (min-width: 1024px) {
+  .composition__flipbook::before {
+    width: 5.208vw;
   }
 }
 .composition__flipbook-nav {

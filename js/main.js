@@ -9,7 +9,6 @@ function flipbook() {
 			display: 'single',
 		});
 
-		// Навигация с помощью кнопок
 		$('#composition__flipbook-prev').click(function() {
 			$('#composition__flipbook').turn('previous');
 		});

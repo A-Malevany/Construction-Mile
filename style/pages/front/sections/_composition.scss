@@ -17,7 +17,7 @@
 	}
 	&__flipbook-wrapper{
 		position: relative;
-		background: rgba(0, 0, 0, 0.1);
+		background: #E5E5E5;
 		padding: vw(10px, $mobile);
 		&::before{
 			content: '';
@@ -60,6 +60,26 @@
 		position: relative;
 		@media (min-width: $desk){
 			aspect-ratio: 16/9;
+		}
+		&::before{
+			content: '';
+			pointer-events: none;
+			position: absolute;
+			z-index: 20;
+			width: vw(40px, $mobile);
+			aspect-ratio: 4/4;
+			top: 0;
+			right: 0;
+			background-image: url("../images/flipbook_el_2.svg");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			@media (min-width: $tab){
+				width: vw(80px, $tablet);
+			}
+			@media (min-width: $desk){
+				width: vw(100px, $desktop);
+			}
 		}
 		&-nav{
 			position: absolute;

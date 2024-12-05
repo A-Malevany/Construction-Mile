@@ -130,13 +130,16 @@
 						<div class="composition__flipbook-inner">
 							<div class="composition__flipbook" id="composition__flipbook">
 								<div>
-									<img src="images/composition__flipbook_1.webp" alt="">
+									<picture>
+										<source srcset="images/composition__flipbook_1.webp" media="(max-width: 600px)" />
+										<img src="images/composition__flipbook_1.webp" alt="">
+									</picture>
 								</div>
 								<div>
-									<img src="images/hero_bg.webp" alt="">
-								</div>
-								<div>
-									<img src="images/composition__flipbook_1.webp" alt="">
+									<picture>
+										<source srcset="images/composition__flipbook_2.webp" media="(max-width: 600px)" />
+										<img src="images/composition__flipbook_2.webp" alt="">
+									</picture>
 								</div>
 							</div>
 							<div class="composition__flipbook-nav">
@@ -341,7 +344,7 @@
 					<div class="bonus__img">
 						<picture>
 							<source srcset="images/bonus_mobile.webp" media="(max-width: 600px)" />
-							<img src="images/bonus.webp" alt="">
+							<img loading="lazy" src="images/bonus.webp" alt="">
 						</picture>
 					</div>
 				</div>
