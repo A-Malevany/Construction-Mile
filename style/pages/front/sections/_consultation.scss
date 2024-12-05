@@ -109,6 +109,12 @@
 		}
 		button.btn{
 			margin-top: vw(10px, $mobile);
+			@media (any-hover: hover){
+				&:hover{
+					border-color: $green;
+					background: $green;
+				}
+			}
 			@media (min-width: $tab){
 				margin-top: vw(10px, $tablet);
 			}

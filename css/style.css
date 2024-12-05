@@ -1995,6 +1995,12 @@ main {
 .consultation form button.btn {
   margin-top: 2.667vw;
 }
+@media (any-hover: hover) {
+  .consultation form button.btn:hover {
+    border-color: #47D47E;
+    background: #47D47E;
+  }
+}
 @media (min-width: 768px) {
   .consultation form button.btn {
     margin-top: 1.302vw;
