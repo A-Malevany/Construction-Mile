@@ -1005,6 +1005,13 @@ main {
   background: #E5E5E5;
   padding: 2.667vw;
 }
+.composition__flipbook-wrapper * {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-user-drag: none;
+}
 .composition__flipbook-wrapper::before {
   content: "";
   display: none;
@@ -1758,7 +1765,15 @@ main {
     margin: 0 0.13vw;
   }
 }
+@media (any-hover: hover) {
+  .projects__item:hover .projects__item-img img {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
 .projects__item-img {
+  overflow: hidden;
   aspect-ratio: 16/14;
 }
 @media (min-width: 1024px) {
@@ -1767,6 +1782,8 @@ main {
   }
 }
 .projects__item-img img {
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
   height: 100%;
 }
 .projects__item-content {

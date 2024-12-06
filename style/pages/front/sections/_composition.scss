@@ -25,6 +25,10 @@
 		position: relative;
 		background: #E5E5E5;
 		padding: vw(10px, $mobile);
+		& * {
+			user-select: none;
+			-webkit-user-drag: none;
+		}
 		&::before{
 			content: '';
 			display: none;
