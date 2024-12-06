@@ -1,6 +1,9 @@
 .steps{
-	padding-top: 0 !important;
 	overflow: hidden;
+	padding: vw(50px, $mobile) 0;
+	@media (min-width: $tab){
+		padding: vw(50px, $tablet) 0;
+	}
 	@media (min-width: $desk){
 		padding: vw(85px, $desktop) 0;
 	}

@@ -21,6 +21,33 @@ function flipbook() {
 }
 flipbook()
 
+function slickCarousel() {
+	$('.projects__items').slick({
+		dots: false,
+		arrows: true,
+		slidesToShow: 3,
+		centerMode: true,
+		// infinite: false,
+		slidesToScroll: 1,
+		centerPadding: '0px',
+		responsive: [
+			{
+				breakpoint: 1023,
+				settings: {
+					slidesToShow: 2,
+				}
+			},
+			{
+				breakpoint: 767,
+				settings: {
+					slidesToShow: 1,
+				}
+			}
+		]
+	});
+}
+slickCarousel();
+
 function popupListInsert(current) {
 	const data = current.dataset.list;
 	if (data) {
@@ -31,6 +58,7 @@ function popupListInsert(current) {
 		dataArray.forEach(item => {
 			const liElement = document.createElement('li');
 			const spanElement = document.createElement('span');
+
 			spanElement.textContent = '✓';
 			liElement.appendChild(spanElement);
 			liElement.append(` ${item}`);

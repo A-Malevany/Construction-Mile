@@ -1,4 +1,4 @@
-.popup {
+.popup{
 	background: rgba(0, 0, 0, 0.5);
 	position: absolute;
 	position: fixed;
@@ -100,6 +100,19 @@
 			span{
 				color: $primary;
 			}
+		}
+	}
+	.btn{
+		max-width: vw(234px, $mobile);
+		width: 100%;
+		margin-top: vw(20px, $mobile);
+		@media (min-width: $tab){
+			max-width: vw(234px, $tablet);
+			margin-top: vw(28px, $tablet);
+		}
+		@media (min-width: $desk){
+			max-width: vw(234px, $desktop);
+			margin-top: vw(28px, $desktop);
 		}
 	}
 }

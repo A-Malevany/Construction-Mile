@@ -6,6 +6,11 @@
 	@media (min-width: $desk){
 		padding: vw(85px, $desktop) 0;
 	}
+	.container{
+		@media (min-width: $desk){
+			max-width: vw(1620px, $desktop);
+		}
+	}
 	.title-section{
 		margin-bottom: vw(14px, $mobile);
 		@media (min-width: $tab){
@@ -13,6 +18,7 @@
 		}
 		@media (min-width: $desk){
 			margin-bottom: vw(25px, $desktop);
+			padding-left: vw(100px, $desktop);
 		}
 	}
 	&__flipbook-wrapper{
@@ -88,16 +94,24 @@
 			left: 50%;
 			transform: translate(-50%, -50%);
 			width: 100%;
-			display: none;
-			button{
-				font-size: 0;
-				width: vw(60px, $desktop);
+			display: flex;
+			justify-content: space-between;
+			padding: 0 vw(10px, $mobile);
+			@media (min-width: $tab){
+				padding: 0 vw(20px, $tablet);
 			}
 			@media (min-width: $desk){
-				display: flex;
-				justify-content: space-between;
-				width: 100%;
 				padding: 0 vw(30px, $desktop);
+			}
+			button{
+				font-size: 0;
+				width: vw(36px, $mobile);
+				@media (min-width: $tab){
+					width: vw(50px, $tablet);
+				}
+				@media (min-width: $desk){
+					width: vw(60px, $desktop);
+				}
 			}
 		}
 		img{

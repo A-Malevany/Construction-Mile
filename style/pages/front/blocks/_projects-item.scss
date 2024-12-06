@@ -1,0 +1,149 @@
+.projects__item{
+	overflow: hidden;
+	border: 1px solid #d5d5d5;
+	border-radius: vw(15px, $mobile);
+	margin: 0 vw(2.5px, $mobile);
+	@media (min-width: $tab){
+		border-radius: vw(15px, $tablet);
+		margin: 0 vw(2.5px, $tablet);
+	}
+	@media (min-width: $desk){
+		border-radius: vw(15px, $desktop);
+		margin: 0 vw(2.5px, $desktop);
+	}
+	&-img{
+		aspect-ratio: 16/14;
+		@media (min-width: $desk){
+			aspect-ratio: 16/10.5;
+		}
+		img{
+			height: 100%;
+		}
+	}
+	&-content{
+		padding: vw(30px, $mobile);
+		@media (min-width: $tab){
+			padding: vw(30px, $tablet);
+		}
+		@media (min-width: $desk){
+			padding: vw(30px, $desktop);
+		}
+	}
+	&-title{
+		font-family: 'Franklin Gothic Demi Cond';
+		font-size: vw(20px, $mobile);
+		text-transform: uppercase;
+		padding-bottom: vw(15px, $mobile);
+		border-bottom: 1px solid #d5d5d5;
+		margin-bottom: vw(20px, $mobile);
+		@media (min-width: $tab){
+			font-size: vw(20px, $tablet);
+			padding-bottom: vw(15px, $tablet);
+			margin-bottom: vw(20px, $tablet);
+		}
+		@media (min-width: $desk){
+			font-size: vw(20px, $desktop);
+			padding-bottom: vw(15px, $desktop);
+			margin-bottom: vw(20px, $desktop);
+		}
+	}
+	&-features{
+		display: flex;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: vw(20px, $mobile);
+		line-height: 1.4;
+		font-size: vw(16px, $mobile);
+		@media (min-width: $tab){
+			gap: vw(20px, $tablet);
+			font-size: vw(16px, $tablet);
+		}
+		@media (min-width: $desk){
+			gap: vw(20px, $desktop);
+			font-size: vw(16px, $desktop);
+		}
+		.square-meters{
+			width: 100%;
+			@media (min-width: $desk){
+				width: auto;
+				order: 9999;
+			}
+			span{
+				color: $white;
+				text-align: center;
+				white-space: nowrap;
+				background: $primary;
+				padding: vw(2px, $mobile) vw(12px, $mobile);
+				border-radius: vw(6px, $mobile);
+				@media (min-width: $tab){
+					padding: vw(2px, $tablet) vw(12px, $tablet);
+					border-radius: vw(6px, $tablet);
+				}
+				@media (min-width: $desk){
+					padding: vw(2px, $desktop) vw(12px, $desktop);
+					border-radius: vw(6px, $desktop);
+				}
+			}
+		}
+		li{
+			display: flex;
+			align-items: center;
+			gap: vw(15px, $mobile);
+			@media (min-width: $tab){
+				gap: vw(15px, $tablet);
+			}
+			@media (min-width: $desk){
+				gap: vw(15px, $desktop);
+			}
+			svg{
+				width: vw(26px, $mobile);
+				height: vw(26px, $mobile);
+				@media (min-width: $tab){
+					width: vw(26px, $tablet);
+					height: vw(26px, $tablet);
+				}
+				@media (min-width: $desk){
+					width: vw(26px, $desktop);
+					height: vw(26px, $desktop);
+				}
+			}
+		}
+	}
+	&-bottom{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: vw(5px, $mobile);
+		margin-top: vw(20px, $mobile);
+		@media (min-width: $tab){
+			margin-top: vw(20px, $tablet);
+			gap: vw(5px, $tablet);
+			flex-direction: row;
+		}
+		@media (min-width: $desk){
+			margin-top: vw(20px, $desktop);
+			gap: vw(10px, $desktop);
+		}
+		.btn{
+			line-height: 1.75;
+			font-family: 'Franklin Gothic Book';
+			padding: 0 vw(20px, $mobile);
+			background: $white;
+			color: $primary;
+			text-transform: none;
+			@media (any-hover: hover){
+				&:hover{
+					background: $greenDark;
+					color: $white;
+				}
+			}
+			@media (min-width: $tab){
+				padding: 0 vw(15px, $tablet);
+			}
+			@media (min-width: $desk){
+				padding: 0 vw(34px, $desktop);
+			}
+		}
+	}
+}

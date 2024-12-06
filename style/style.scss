@@ -4,6 +4,7 @@
 @import './common/nullstyle';
 @import './common/fonts';
 @import './common/general';
+@import './common/slick';
 @import './modules/popup';
 @import './modules/title-section';
 @import './modules/btn';
@@ -15,5 +16,7 @@
 @import './pages/front/sections/composition';
 @import './pages/front/sections/price';
 @import './pages/front/sections/bonus';
+@import './pages/front/sections/projects';
+@import './pages/front/blocks/projects-item';
 @import './pages/front/sections/steps';
 @import './pages/front/sections/consultation';

@@ -15,11 +15,14 @@
 	}
 	.title-section{
 		margin-bottom: vw(20px, $mobile);
+		font-size: vw(24px, $mobile);
 		@media (min-width: $tab){
 			margin-bottom: vw(30px, $tablet);
+			font-size: vw(28px, $tablet);
 		}
 		@media (min-width: $desk){
 			margin-bottom: vw(40px, $desktop);
+			font-size: vw(36px, $desktop);
 		}
 	}
 	&__inner{

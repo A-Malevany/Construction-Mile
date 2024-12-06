@@ -59,8 +59,8 @@
 			&:hover{
 				background: $primary !important;
 				color: $white;
-				.price__item-icon{
-					filter: invert(1) brightness(1);
+				.price__item-icon svg path{
+					stroke: $white;
 				}
 				.price__item-days, .price__item-price{
 					border-color: $white;
