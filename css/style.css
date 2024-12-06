@@ -1604,6 +1604,9 @@ main {
     color: #6E6C6C;
   }
 }
+.projects__items .slick-track {
+  padding-bottom: 1px;
+}
 .projects__items .slick-list {
   margin: 0 -0.667vw;
   border-radius: 4vw;

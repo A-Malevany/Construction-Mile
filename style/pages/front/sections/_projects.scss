@@ -35,6 +35,9 @@
 		}
 	}
 	&__items{
+		.slick-track{
+			padding-bottom: 1px;
+		}
 		.slick-list{
 			margin: 0 vw(-2.5px, $mobile);
 			border-radius: vw(15px, $mobile);
