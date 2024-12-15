@@ -5,6 +5,7 @@
 @import './common/fonts';
 @import './common/general';
 @import './common/slick';
+@import './common/fancybox.min';
 @import './modules/popup';
 @import './modules/title-section';
 @import './modules/btn';
@@ -20,3 +21,8 @@
 @import './pages/front/blocks/projects-item';
 @import './pages/front/sections/steps';
 @import './pages/front/sections/consultation';
+
+//Portfolio
+@import './pages/portfolio/sections/portfolio';
+@import './pages/portfolio/sections/steps-construction';
+@import './pages/portfolio/sections/imgs-steps-construction';

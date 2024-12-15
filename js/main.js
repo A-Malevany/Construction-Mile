@@ -1,22 +1,24 @@
 function flipbook() {
 	$(document).ready(function() {
-		$('#composition__flipbook').turn({
-			width: '100%',
-			height: 'auto',
-			swipe: true,
-			acceleration: 1,
-			ease: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
-			autoCenter: true,
-			display: 'single',
-		});
+		if ($('#composition__flipbook').length > 0) {
+			$('#composition__flipbook').turn({
+				width: '100%',
+				height: 'auto',
+				swipe: true,
+				acceleration: 1,
+				ease: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+				autoCenter: true,
+				display: 'single',
+			});
 
-		$('#composition__flipbook-prev').click(function() {
-			$('#composition__flipbook').turn('previous');
-		});
+			$('#composition__flipbook-prev').click(function() {
+				$('#composition__flipbook').turn('previous');
+			});
 
-		$('#composition__flipbook-next').click(function() {
-			$('#composition__flipbook').turn('next');
-		});
+			$('#composition__flipbook-next').click(function() {
+				$('#composition__flipbook').turn('next');
+			});
+		}
 	});
 }
 flipbook()

@@ -1,0 +1,147 @@
+.portfolio{
+	padding: vw(20px, $mobile) 0 vw(60px, $mobile) 0;
+	@media (min-width: $tab){
+		padding: vw(40px, $tablet) 0 vw(80px, $tablet) 0;
+	}
+	@media (min-width: $desk){
+		padding: vw(50px, $desktop) 0 vw(100px, $desktop) 0;
+	}
+	.title-section{
+		margin-bottom: vw(20px, $mobile);
+		@media (min-width: $tab){
+			margin-bottom: vw(32px, $tablet);
+		}
+		@media (min-width: $desk){
+			margin-bottom: vw(32px, $desktop);
+		}
+	}
+	&__items{
+		display: flex;
+		flex-direction: column;
+		gap: vw(20px, $mobile);
+		@media (min-width: $tab){
+			gap: vw(36px, $tablet);
+		}
+		@media (min-width: $desk){
+			gap: vw(36px, $desktop);
+		}
+	}
+	&__item{
+		display: grid;
+		grid-template-columns: repeat(1, minmax(auto, 1fr));
+		gap: vw(10px, $mobile);
+		padding: vw(10px, $mobile);
+		margin: 0 vw(-10px, $mobile);
+		box-shadow: 0 2px 31px 0 rgba(0, 0, 0, 0.35);
+		background: $white;
+		@media (min-width: $tab){
+			grid-template-columns: repeat(2, minmax(auto, 1fr));
+			gap: vw(20px, $tablet);
+			padding: vw(20px, $tablet);
+			margin: 0 vw(-20px, $tablet);
+		}
+		@media (min-width: $desk){
+			grid-template-columns: repeat(2, minmax(auto, 1fr));
+			gap: vw(20px, $desktop);
+			padding: vw(20px, $desktop);
+			margin: 0 vw(-20px, $desktop);
+		}
+		img{
+			cursor: pointer;
+			display: block;
+		}
+		&-img-main{
+			position: relative;
+		}
+		&-imgs{
+			display: grid;
+			grid-template-columns: repeat(2, minmax(auto, 1fr));
+			gap: vw(10px, $mobile);
+			@media (min-width: $tab){
+				gap: vw(20px, $tablet);
+			}
+			@media (min-width: $desk){
+				gap: vw(20px, $desktop);
+			}
+		}
+		&-info{
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			background: $primary;
+			color: $white;
+			padding: vw(17px, $mobile) vw(24px, $mobile) vw(17px, $mobile) vw(14px, $mobile);
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: vw(6px, $mobile);
+			@media (min-width: $tab){
+				padding: vw(17px, $tablet) vw(24px, $tablet) vw(17px, $tablet) vw(14px, $tablet);
+				gap: vw(6px, $tablet);
+			}
+			@media (min-width: $desk){
+				padding: vw(24px, $desktop);
+				gap: vw(7px, $desktop);
+			}
+		}
+		&-name{
+			font-family: 'Franklin Gothic Demi Cond';
+			text-transform: uppercase;
+			font-size: vw(16px, $mobile);
+			@media (min-width: $tab){
+				font-size: vw(20px, $tablet);
+			}
+			@media (min-width: $desk){
+				font-size: vw(24px, $desktop);
+			}
+		}
+		&-address{
+			font-family: 'Franklin Gothic Book';
+			font-size: vw(14px, $mobile);
+			color: #dbffe9;
+			display: flex;
+			align-items: center;
+			gap: vw(3px, $mobile);
+			@media (min-width: $tab){
+				font-size: vw(14px, $tablet);
+				gap: vw(3px, $tablet);
+			}
+			@media (min-width: $desk){
+				font-size: vw(14px, $desktop);
+				gap: vw(3px, $desktop);
+			}
+			&::before{
+				content: '';
+				width: vw(18px, $mobile);
+				aspect-ratio: 4/4;
+				background-image: url("../images/icons/address.svg");
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: contain;
+				@media (min-width: $tab){
+					width: vw(18px, $tablet);
+				}
+				@media (min-width: $desk){
+					width: vw(18px, $desktop);
+				}
+			}
+		}
+	}
+	&__btn{
+		display: block;
+		max-width: vw(205px, $mobile);
+		margin: 0 auto;
+		margin-top: vw(40px, $mobile);
+		border-radius: vw(5px, $mobile);
+		@media (min-width: $tab){
+			margin-top: vw(50px, $tablet);
+			max-width: vw(205px, $tablet);
+			border-radius: vw(5px, $tablet);
+		}
+		@media (min-width: $desk){
+			margin-top: vw(50px, $desktop);
+			max-width: vw(205px, $desktop);
+			border-radius: vw(5px, $desktop);
+		}
+	}
+}

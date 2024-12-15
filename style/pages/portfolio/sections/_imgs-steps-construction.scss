@@ -1,0 +1,111 @@
+.imgs-steps-construction{
+	.title-section{
+		margin-bottom: vw(32px, $mobile);
+		@media (min-width: $tab){
+			margin-bottom: vw(26px, $tablet);
+		}
+		@media (min-width: $tab){
+			margin-bottom: vw(26px, $desktop);
+		}
+	}
+	&__items{
+		padding: vw(10px, $mobile);
+		margin: 0 vw(-10px, $mobile);
+		box-shadow: 0 2px 31px 0 rgba(0, 0, 0, 0.35);
+		background: $white;
+		gap: vw(10px, $mobile);
+		display: grid;
+		grid-template-columns: repeat(2, minmax(auto, 1fr));
+		@media (min-width: $tab){
+			gap: vw(20px, $tablet);
+			padding: vw(20px, $tablet);
+			margin: 0 vw(-20px, $tablet);
+			gap: vw(20px, $tablet);
+		}
+		@media (min-width: $desk){
+			gap: vw(20px, $desktop);
+			padding: vw(20px, $desktop);
+			margin: 0 vw(-20px, $desktop);
+			gap: vw(20px, $desktop);
+			grid-template-columns: repeat(3, minmax(auto, 1fr));
+		}
+	}
+	&__item{
+		position: relative;
+		&:last-child{
+			@media (min-width: $desk){
+				grid-column: span 2;
+			}
+			@media (min-width: $tab){
+				img{
+					object-position: 20%;
+				}	
+			}
+		}
+		&-info{
+			max-width: vw(105px, $mobile);
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: $primary;
+			color: $white;
+			padding: vw(10px, $mobile) vw(8px, $mobile);
+			display: flex;
+			flex-direction: column;
+			gap: vw(7px, $mobile);
+			@media (min-width: $tab){
+				max-width: vw(187px, $tablet);
+				padding: vw(14px, $tablet);
+				gap: vw(7px, $tablet);
+			}
+			@media (min-width: $desk){
+				max-width: vw(187px, $desktop);
+				padding: vw(14px, $desktop);
+				gap: vw(7px, $desktop);
+			}
+		}
+		&-name{
+			font-size: vw(12px, $mobile);
+			text-transform: uppercase;
+			@media (min-width: $tab){
+				font-size: vw(16px, $tablet);
+			}
+			@media (min-width: $desk){
+				font-size: vw(16px, $desktop);
+			}
+		}
+		&-count{
+			font-family: 'Franklin Gothic Book';
+			font-size: vw(10px, $mobile);
+			@media (min-width: $tab){
+				font-size: vw(14px, $tablet);
+			}
+			@media (min-width: $desk){
+				font-size: vw(14px, $desktop);
+			}
+		}
+		&-btn{
+			position: absolute;
+			right: vw(11px, $mobile);
+			bottom: vw(15px, $mobile);
+			@media (min-width: $tab){
+				right: vw(34px, $tablet);
+				bottom: vw(33px, $tablet);
+			}
+			@media (min-width: $desk){
+				right: vw(34px, $desktop);
+				bottom: vw(33px, $desktop);
+			}
+		}
+		img{
+			display: block;
+			height: vw(226px, $mobile);
+			@media (min-width: $tab){
+				height: vw(226px, $tablet);
+			}
+			@media (min-width: $desk){
+				height: vw(226px, $desktop);
+			}
+		}
+	}
+}
