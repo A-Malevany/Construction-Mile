@@ -1,0 +1,17 @@
+.map-portfolio{
+	position: relative;
+	&__inner{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		padding: vw(28px, $mobile) 0;
+		@media (min-width: $tab){
+			padding: vw(40px, $tablet) 0;
+		}
+		@media (min-width: $desk){
+			padding: vw(40px, $desktop) 0;
+		}
+	}
+}
