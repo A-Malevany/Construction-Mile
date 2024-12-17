@@ -92,3 +92,25 @@ function popupList() {
 	})
 }
 popupList();
+
+function addPosts() {
+	let countMaxPost = 2;
+
+	$('.post-wrapper').each(function () {
+		let wrapper = $(this);
+
+		wrapper.find('.add-post-btn').hide();
+		wrapper.find('.post-item').hide();
+		wrapper.find(`.post-item:lt(${countMaxPost})`).show();
+
+		if (wrapper.find('.post-item').length > countMaxPost) {
+			wrapper.find('.add-post-btn').show();
+		}
+
+		wrapper.find('.add-post-btn').click(function () {
+			$(this).closest('.post-wrapper').find('.post-item').show();
+			$(this).remove();
+		});
+	});
+}
+addPosts();

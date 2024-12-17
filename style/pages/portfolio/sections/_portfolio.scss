@@ -64,6 +64,47 @@
 				gap: vw(20px, $desktop);
 			}
 		}
+		&-img{
+			cursor: pointer;
+			position: relative;
+			&::before, &::after{
+				content: '';
+				position: absolute;
+				opacity: 0;
+				transition: .3s ease;
+			}
+			&::before{
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				background: rgba(0, 0, 0, 0.58);
+			}
+			&::after{
+				width: vw(50px, $mobile);
+				aspect-ratio: 4/4;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				background-image: url("../images/icons/slick-next-active.svg");
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: contain;
+				@media (min-width: $tab){
+					width: vw(65px, $tablet);
+				}
+				@media (min-width: $desk){
+					width: vw(65px, $desktop);
+				}
+			}
+			@media (any-hover: hover){
+				&:hover{
+					&::before, &::after{
+						opacity: 1;
+					}
+				}
+			}
+		}
 		&-info{
 			position: absolute;
 			left: 0;

@@ -23,7 +23,7 @@
 			}
 		}
 		@media (min-width: $desk){
-			background-image: url("../images/steps_bg.webp");
+			background-image: url("../images/steps-construction__bg.webp");
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: cover;
@@ -48,60 +48,6 @@
 			background-repeat: no-repeat;
 			background-size: contain;
 		}
-		// @media (min-width: $tab){
-		// 	padding: vw(24px, $tablet) vw(10px, $tablet) vw(24px, $tablet) vw(20px, $tablet);
-		// 	&:nth-child(1){
-		// 		order: 1;
-		// 		&::before{
-		// 			background-image: url("../images/icons/step_from_1_desktop.svg");
-		// 			width: vw(45px, $tablet);
-		// 			height: vw(20px, $tablet);
-		// 			bottom: vw(35px, $tablet);
-		// 			right: vw(-10px, $tablet);
-		// 		}
-		// 	}
-		// 	&:nth-child(2){
-		// 		order: 2;
-		// 		&::before{
-		// 			background-image: url("../images/icons/step_from_1_desktop.svg");
-		// 			width: vw(45px, $tablet);
-		// 			height: vw(20px, $tablet);
-		// 			bottom: vw(35px, $tablet);
-		// 			right: vw(-10px, $tablet);
-		// 		}
-		// 	}
-		// 	&:nth-child(3){
-		// 		order: 3;
-		// 		&::before{
-		// 			background-image: url("../images/icons/step_from_3_desktop.svg");
-		// 			width: vw(35px, $tablet);
-		// 			height: vw(130px, $tablet);
-		// 			bottom: vw(-100px, $tablet);
-		// 			left: vw(50px, $tablet);
-		// 		}
-		// 	}
-		// 	&:nth-child(4){
-		// 		background: $white;
-		// 		order: 6;
-		// 		&::before{
-		// 			background-image: url("../images/icons/step_from_4_desktop.svg");
-		// 			width: vw(45px, $tablet);
-		// 			height: vw(20px, $tablet);
-		// 			bottom: vw(60px, $tablet);
-		// 			left: vw(-25px, $tablet);
-		// 		}
-		// 	}
-		// 	&:nth-child(5){
-		// 		order: 5;
-		// 		.steps__item-step{
-		// 			transform: scale(1.25);
-		// 		}
-		// 	}
-		// 	&:nth-child(6){
-		// 		background: $white;
-		// 		order: 4;
-		// 	}
-		// }
 		@media (min-width: $tab){
 			padding: vw(24px, $tablet) vw(20px, $tablet) vw(40px, $tablet) vw(30px, $tablet);
 			height: vw(200px, $tablet);

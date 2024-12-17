@@ -32,7 +32,50 @@
 	}
 	&__item{
 		position: relative;
+		&::before, &::after{
+			content: '';
+			position: absolute;
+			opacity: 0;
+			transition: .3s ease;
+		}
+		&::before{
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: rgba(0, 0, 0, 0.58);
+		}
+		&::after{
+			width: vw(50px, $mobile);
+			aspect-ratio: 4/4;
+			bottom: vw(20px, $mobile);
+			right: vw(20px, $mobile);
+			background-image: url("../images/icons/slick-next-active.svg");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			@media (min-width: $tab){
+				width: vw(65px, $tablet);
+				bottom: vw(20px, $tablet);
+				right: vw(20px, $tablet);
+			}
+			@media (min-width: $desk){
+				width: vw(65px, $desktop);
+				bottom: vw(20px, $desktop);
+				right: vw(20px, $desktop);
+			}
+		}
+		@media (any-hover: hover){
+			&:hover{
+				&::before, &::after{
+					opacity: 1;
+				}
+			}
+		}
 		&:last-child{
+			&::before, &::after{
+				display: none;
+			}
 			@media (min-width: $desk){
 				grid-column: span 2;
 			}
