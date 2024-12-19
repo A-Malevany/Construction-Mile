@@ -3,6 +3,9 @@
 	font-weight: 400;
 	font-size: vw(20px, $mobile);
 	text-transform: uppercase;
+	text-align: left;
+	color: inherit;
+	line-height: 1;
 	@media (min-width: $tab){
 		font-size: vw(28px, $tablet);
 	}

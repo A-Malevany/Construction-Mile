@@ -1,4 +1,4 @@
-.btn{
+main .btn{
 	background: $primary;
 	color: $white;
 	border: 1px solid $primary;
@@ -9,6 +9,7 @@
 	text-transform: uppercase;
 	text-align: center;
 	transition: .3s ease;
+	height: auto;
 	&.small{
 		padding: vw(2px, $mobile) vw(20px, $mobile);
 		@media (min-width: $tab){

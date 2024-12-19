@@ -34,6 +34,8 @@
 	&__title{
 		font-size: vw(23px, $mobile);
 		text-transform: uppercase;
+		text-align: left;
+		line-height: 1;
 		@media (min-width: $tab){
 			font-size: vw(24px, $tablet);
 		}

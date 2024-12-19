@@ -12,5 +12,6 @@
 	$rounded-value: round($vw-value * $multiplier) / $multiplier;
 
 	// Возвращаем результат с единицами измерения vw
-	@return #{$rounded-value}vw;
+	// @return #{$rounded-value}vw;
+	@return #{$px};
 }

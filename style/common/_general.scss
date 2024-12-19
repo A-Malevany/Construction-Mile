@@ -5,27 +5,79 @@ body{
 	}
 }
 
-html, body{
-	height: 100%;
-	min-height: 100%;
-	display: flex;
-	flex-direction: column;
-}
+// html, body{
+// 	height: 100%;
+// 	min-height: 100%;
+// 	display: flex;
+// 	flex-direction: column;
+// }
+// main{
+// 	flex: 1 1 auto;
+// }
+
 main{
-	flex: 1 1 auto;
+	line-height: 1;
 }
 
-.container{
-	max-width: vw(375px, $mobile);
+main .container{
 	margin: 0 auto;
-	padding: 0 vw(20px, $mobile);
+	padding: 0 20px;
 	width: 100%;
+	max-width: 100%;
 	@media(min-width:$tab){
-		max-width: vw(768px, $tablet);
-		padding: 0 vw(30px, $tablet);
+		width: 100%;
+		max-width: 100%;
+		padding: 0 40px;
 	}
 	@media(min-width:$desk){
-		max-width: vw(1440px, $desktop);
-		padding: 0 vw(140px, $desktop);
+		width: 100%;
+		max-width: calc(1168px + 120px);
+		padding: 0 60px;
 	}
+}
+
+h1, h2, h3, h4, h5, h6{
+	color: inherit;
+	font-weight: inherit;
+	line-height: 1;
+	margin: 0;
+	padding: 0;
+}
+
+main section, main .section {
+  padding: 0 0;
+}
+main .page {
+  padding-top: 0px;
+  max-width: none;
+  overflow: visible;
+}
+
+.popupf {
+  display: none;
+  padding: 50px;
+  background: #fff;
+}
+.popupf {
+  width: 700px;
+  font-weight: 100;
+}
+
+.popupf h2 {
+  text-transform: uppercase;
+  text-align: center;
+  color: #151515;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 36px;
+  margin: 25px 0;
+}
+
+.breadcrumb {display:none}
+@media (max-width: 960px) {
+.popupf {width: 100%;padding: 20px;}
+}
+
+.composition__flipbook .page {
+  margin: 0;
 }
